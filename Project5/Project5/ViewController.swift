@@ -113,6 +113,17 @@ class ViewController: UITableViewController {
     }
     
     func isReal(word: String) -> Bool {
+        
+        // desafio 01: minimo de 03 letras
+          if word.count < 3 {
+              return false
+          }
+          
+          // desafio 01: não pode ser igual à palavra sorteada
+          if word == title?.lowercased() {
+              return false
+          }
+        
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
