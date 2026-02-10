@@ -17,6 +17,9 @@ class ViewController: UITableViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForAnswer))
         
+        //Desafio 03: criar um botao de restart
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Restart", style: .plain, target: self, action: #selector(restartGame))
+        
         
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsURL, encoding: .utf8) {
@@ -58,6 +61,11 @@ class ViewController: UITableViewController {
         
         ac.addAction(submitAction)
         present(ac, animated: true)
+    }
+    
+    //Desafio 03: como foi usado #Selector, precisamos chamar @objc
+    @objc func restartGame() {
+        startGame()
     }
     
     func submit(_ answer: String) {
