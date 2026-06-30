@@ -1,54 +1,44 @@
-# Jogo das palavras - Projeto de estudo
+# iOS Word Scramble - Projeto de Estudo
 
-Este projeto é um **jogo de palavras desenvolvido em Swift utilizando UIKit**, criado como parte do processo de aprendizado no curso **100 Days of Swift**.
+Aplicativo desenvolvido em **UIKit** onde o jogador recebe uma palavra base e precisa formar novas palavras utilizando apenas as letras disponíveis nela.
 
-O jogador recebe uma palavra base e precisa formar novas palavras utilizando apenas as letras disponíveis nela.
+Este projeto faz parte do **Project 5** do curso **100 Days of Swift**, mas foi desenvolvido com o objetivo de praticar conceitos fundamentais de manipulação de strings, validação de dados e construção de interfaces utilizando UIKit.
 
----
+## O que o app faz
 
-## Objetivo do projeto
+- Seleciona uma palavra aleatória a partir de um arquivo (`start.txt`)
+- Permite formar novas palavras utilizando apenas as letras da palavra base
+- Valida se a palavra pode ser formada com as letras disponíveis
+- Impede o uso de palavras repetidas
+- Valida a existência da palavra utilizando `UITextChecker`
+- Exige que a palavra tenha pelo menos 3 letras
+- Impede o uso da própria palavra original
+- Exibe dinamicamente a lista de palavras válidas
+- Permite reiniciar o jogo
 
-Praticar conceitos fundamentais do desenvolvimento iOS, incluindo:
+## Arquitetura
 
-* Uso de **UITableViewController**
-* Manipulação de **arrays e strings**
-* Validação de entrada do usuário
-* Uso de **UIAlertController**
-* Uso do **UITextChecker** para validar palavras
-* Estruturação de lógica de jogo
+O projeto foi estruturado utilizando **UIKit**, separando a interface da lógica responsável pela validação das palavras e gerenciamento do estado do jogo.
 
----
+## Decisões importantes
 
-## Como funciona
+- UIKit programático
+- Uso de UITableViewController
+- Validação de palavras utilizando UITextChecker
+- Inserção de palavras através de UIAlertController
+- Manipulação de arrays e strings
+- Estruturação da lógica de validação das respostas
 
-1. O aplicativo seleciona uma palavra aleatória a partir de um arquivo (`start.txt`).
-2. O jogador precisa formar novas palavras usando apenas as letras dessa palavra.
-3. Cada palavra enviada passa por validações:
+## Conceitos praticados
 
-* Deve poder ser formada com as letras disponíveis
-* Não pode ter sido usada anteriormente
-* Deve existir no dicionário
-* Deve ter pelo menos **3 letras**
-* Não pode ser igual à palavra original
+- UIKit
+- UITableViewController
+- UIAlertController
+- UITextChecker
+- Manipulação de Arrays
+- Manipulação de Strings
+- Validação de dados
 
-Se a palavra for válida, ela é adicionada à lista exibida na tabela.
+## Créditos
 
----
-
-## Funcionalidades
-
-* Inserção de palavras através de **alert com campo de texto**
-* Lista dinâmica de palavras válidas
-* Validação automática de palavras
-* Botão para **reiniciar o jogo**
-
----
-
-
-## Tecnologias utilizadas
-
-* Swift
-* UIKit
-* UITableViewController
-* UIAlertController
-* UITextChecker
+Projeto baseado no **Project 5**, do curso **100 Days of Swift**, criado por **Paul Hudson (Hacking with Swift)**.
